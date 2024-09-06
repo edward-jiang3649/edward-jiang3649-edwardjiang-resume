@@ -1,0 +1,197 @@
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden; /* Hide content until hover */
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+/* Navbar List Styles */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: height 0.5s ease;
+}
+
+/* Navbar List Items */
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+#navbar:hover {
+    height: auto; /* Expands navbar on hover */
+}
+
+#navbar:hover ul {
+    height: auto; /* Allow list items to expand */
+}
+
+/* Navbar Active and Hover State */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Opacity Change on Hover */
+#navbar ul li a {
+    opacity: 0.8;
+}
+
+#navbar ul li a:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+/* Prevent Content Overlap with Navbar */
+body {
+    margin: 0;}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1000px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Ensure expansion on smaller screens */
+    }
+
+    #navbar ul li {
+        margin-bottom: 5px;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Education Section Formatting */
+.education-section {
+    background-color: #1E2A38;
+    color: #FFFFFF;
+    padding: 100px 20px; /* Increased padding to avoid overlap with navbar */
+    text-align: left;
+}
+
+.education-section h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00A8E8;
+}
+
+.education-item {
+    background-color: #2C3E50;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h4, .education-item h5 {
+    color: #FFFFFF;
+}
+
+.education-item p {
+    color: #E8E8E8;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.education-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.education-item ul li {
+    color: #A9BDC9;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Skill Tags Styling */
+.skills-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.tag:hover {
+    background-color: #00A8E8; /* A hover effect for better interaction */
+}
+
+
+
+
+
+
+
+
+
+/* Course Category Styling */
+.course-category {
+    margin-bottom: 20px;
+}
+
+.course-category h6 {
+    color: #00A8E8;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Course List Styling */
+.course-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.course-list li {
+    color: #A9BDC9;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Styling for the "Courses Studied:" heading */
+.education-item h5 {
+    font-size: 1.8rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the heading */
+    margin-bottom: 5px; /* Add some space below the heading */
+    color: #00A8E8; /* Optional: Change color to match theme */
+}

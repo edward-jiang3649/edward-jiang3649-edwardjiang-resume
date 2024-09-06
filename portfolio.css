@@ -1,0 +1,266 @@
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden; /* Hide content until hover */
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+/* Navbar List Styles */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: height 0.5s ease;
+}
+
+/* Navbar List Items */
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+#navbar:hover {
+    height: auto; /* Expands navbar on hover */
+}
+
+#navbar:hover ul {
+    height: auto; /* Allow list items to expand */
+}
+
+/* Navbar Active and Hover State */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Opacity Change on Hover */
+#navbar ul li a {
+    opacity: 0.8;
+}
+
+#navbar ul li a:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+/* Prevent Content Overlap with Navbar */
+body {
+    margin: 0;
+    padding-top: 0px; /* Adjust to match navbar height */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1000px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Ensure expansion on smaller screens */
+    }
+
+    #navbar ul li {
+        margin-bottom: 5px;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio {
+    padding: 100px 20px;
+    background-color: #1E2A38;
+    color: #FFFFFF;
+}
+
+.portfolio-item {
+    margin-bottom: 50px;
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item h3 {
+    color: #00A8E8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item p {
+    color: #E8E8E8;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-item a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00A8E8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.portfolio-item a.button:hover {
+    background-color: #007BB5;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide Image */
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Slide Navigation Text */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1.5s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Video Container */
+.video-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* Mini Navigation Bar */
+#section-nav {
+    background-color: #1E2A38; /* Dark professional background */
+    padding: 15px 0;
+    margin: 30px 0;
+    text-align: center;
+    position: sticky;
+    top: 50px; /* Sticks below the main navbar */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+#section-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between links */
+}
+
+#section-nav ul li {
+    display: inline-block;
+}
+
+#section-nav ul li a {
+    color: #00A8E8; /* Bright accent color for text */
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500; /* Slightly bolder text */
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    border-radius: 30px; /* Rounded pill shape for buttons */
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+}
+
+#section-nav ul li a:hover {
+    background-color: #00A8E8; /* Hover effect background color */
+    color: #FFFFFF; /* White text on hover */
+    box-shadow: 0 4px 12px rgba(0, 168, 232, 0.4); /* Hover shadow effect */
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Styles for Title with ID title-portfolio */
+#title-portfolio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #00A8E8; /* Accent color */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; /* Optional for all caps look */
+    letter-spacing: 1.5px; /* Slightly increase space between letters */
+    text-align: center; /* Center the text */
+}

@@ -1,0 +1,179 @@
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden; /* Hide content until hover */
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+/* Navbar List Styles */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: height 0.5s ease;
+}
+
+/* Navbar List Items */
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+#navbar:hover {
+    height: auto; /* Expands navbar on hover */
+}
+
+#navbar:hover ul {
+    height: auto; /* Allow list items to expand */
+}
+
+/* Navbar Active and Hover State */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Opacity Change on Hover */
+#navbar ul li a {
+    opacity: 0.8;
+}
+
+#navbar ul li a:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+/* Prevent Content Overlap with Navbar */
+body {
+    margin: 0;
+    padding-top: 60px; /* Adjust to match navbar height */
+    font-family: 'Montserrat', sans-serif;
+    color: #EAEAEA; /* Ensure the text color is readable */
+    background-color: #2C3E50; /* Matches the larger box background color */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1000px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Ensure expansion on smaller screens */
+    }
+
+    #navbar ul li {
+        margin-bottom: 5px;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic styling for skills section */
+#skills {
+    padding: 20px;
+    text-align:center;
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
+#skills h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #00A8E8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container for all skill items */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Individual skill item styling */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Set a fixed width for consistency */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Image styling */
+.skill-icon {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Hover effect for skill items */
+.skill-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Text styling */
+.skill-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: auto;
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: space-around;
+    }
+
+    .skill-item {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .skill-icon {
+        width: auto;
+        height: 100px;
+    }
+}
+
+.skill-item p {
+    font-size: 16px; /* Smaller text size for smaller screens */
+}

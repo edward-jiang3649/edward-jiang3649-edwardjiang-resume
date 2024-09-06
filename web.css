@@ -1,26 +1,12 @@
 /* General Navbar Styles */
 #navbar {
-    background-color: rgba(33, 33, 33, 0.9); /* Dark background */
+    background-color: rgba(33, 33, 33, 0.9);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: auto; /* Allow height to expand naturally */
+    height: 50px;
     transition: height 0.5s ease, background-color 0.5s ease;
-    overflow: hidden; /* Hide content when minimized */
-}
-
-/* When hovered, expand the navbar */
-#navbar:hover {
-    height: auto; /* Expand navbar when hovered */
-    background-color: rgba(33, 33, 33, 1); /* Darker background when expanded */
-}
-
-.navbar-content {
-    display: flex;
-    justify-content: center; /* Center the navbar content */
-    align-items: center;
-    padding: 0 20px;
 }
 
 #navbar ul {
@@ -28,51 +14,45 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    justify-content: center; /* Center the navigation items */
-    width: 100%;
-    opacity: 0; /* Initially hidden in minimized state */
-    transition: opacity 0.5s ease;
-}
-
-/* Show the nav links when hovered */
-#navbar:hover ul {
-    opacity: 1;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 
 #navbar ul li {
-    margin: 5px 0;
-    padding: 5px;
-    flex: 1 0 auto; /* Allow the items to grow and shrink based on available space */
+    padding: 0 15px;
 }
 
 #navbar ul li a {
     text-decoration: none;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: block;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover, #navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Hover Styles */
+#navbar:hover {
+    height: auto;
+    background-color: rgba(33, 33, 33, 1);
+}
+
+#navbar:hover ul {
+    opacity: 1;
+}
+
+#navbar ul li a {
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
 #navbar ul li a:hover {
-    color: #00A8E8;
-}
-
-/* Minimized State Styles */
-.active-page {
-    display: block; /* Show the active page in minimized mode */
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-    padding: 15px 0;
-}
-
-#navbar:hover .active-page {
-    display: none; /* Hide active page when expanded */
+    opacity: 1;
+    background-color: #555;
 }
 
 /* Media Query for Smaller Screens */
@@ -83,253 +63,100 @@
     }
 
     #navbar ul li {
-        flex: 0 1 100%; /* Make each item take up full width on small screens */
         margin-bottom: 5px;
     }
 
     #navbar ul li a {
-        font-size: 1rem; /* Slightly smaller font size on smaller screens */
+        font-size: 1rem;
     }
 }
 
-/* Additional Media Query for Medium Screens */
-@media (max-width: 1024px) {
-    #navbar ul {
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        justify-content: center; /* Ensure the items are centered */
-    }
 
-    #navbar ul li {
-        flex: 0 1 auto; /* Allow wrapping behavior */
-    }
-}
-
-/* Architectural Content Formatting */
-section {
-    padding: 150px 20px 100px; /* Top padding to create space between navbar and content */
-    margin: 10px;
-    background: #1E2A38; /* Professional dark blue/charcoal background */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 100px auto;
-    box-sizing: border-box;
-    color: #FFFFFF; /* White text */
-}
-
-h2 {
-    color: #FFFFFF; /* White text for headings */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-h3 {
-    color: #A9BDC9; /* Light grey for subheadings */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
-}
-
-p, ul li {
-    font-size: 1.1rem;
-    color: #E8E8E8; /* Light grey for body text */
-    line-height: 1.75;
-    text-align: center;
-}
-
-.education-item {
-    margin-bottom: 30px;
-}
-
-.education-item h4 {
-    color: #FFFFFF;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.education-item h5 {
-    color: #A9BDC9;
-    font-size: 1.25rem;
-}
-
-.education-item p, .education-item ul {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    color: #E8E8E8;
-}
-
-.education-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.education-item ul li {
-    margin-bottom: 5px;
-}
-
-.education-item span {
-    display: block;
-    font-size: 1rem;
-    color: #00A8E8; /* Accent color for highlights */
-    margin-top: 5px;
-}
-
-.education-item h4:hover {
-    color: #00A8E8; /* Hover effect on headings */
-}
-
-
-
-
-
-#portfolio {
-    padding: 100px 20px;
-    background-color: #1E2A38;
-    color: #FFFFFF;
-}
-
-.portfolio-item {
-    margin-bottom: 50px;
-    background-color: #2C3E50;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-item h3 {
-    color: #00A8E8;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.portfolio-item p {
-    color: #E8E8E8;
-    font-size: 1.1rem;
-    line-height: 1.75;
-    margin-bottom: 1.5rem;
-}
-
-.portfolio-item a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00A8E8;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.portfolio-item a.button:hover {
-    background-color: #007BB5;
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #000;
-}
-
-.video-container iframe {
-    position: absolute;
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    z-index: 1000;
+    height: 50px; /* Fixing height for default view */
+    transition: height 0.5s ease, background-color 0.5s ease;
 }
 
-
-
-
-#about-me {
-    background-color: #1E2A38;
-    color: #FFFFFF;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about-me-container {
-    max-width: 1200px;
-    margin: 0 auto;
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     align-items: center;
 }
 
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 4px solid #00A8E8;
+#navbar ul li {
+    display: inline;
+    padding: 0 15px;
 }
 
-.about-me-text {
-    max-width: 800px;
-    text-align: left;
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
 }
-
-.about-me-text h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about-me-text p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.75;
-}
-
-
-
-
-.education-section {
-    background-color: #1E2A38;
-    color: #FFFFFF;
-    padding: 60px 20px;
-    text-align: left;
-}
-
-.education-section h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #00A8E8;
-}
-
-.education-item {
-    background-color: #2C3E50;
-    border-radius: 8px;
+/* Container for work experience items */
+.work-experience-container {
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Title formatting */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #333;
 }
 
-.education-item h4, .education-item h5 {
-    color: #FFFFFF;
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    transition: height 0.5s ease, background-color 0.5s ease;
 }
 
-.education-item p {
-    color: #E8E8E8;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.education-item ul {
+#navbar ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 
-.education-item ul li {
-    color: #A9BDC9;
-    margin-bottom: 5px;
+#navbar ul li {
+    display: inline;
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+}
+
+#navbar ul li a:hover, #navbar ul li a.active {
+    background-color: #4CAF50; /* Highlight the active page */
+    color: white;
 }

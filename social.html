@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media</title>
-    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="social.css">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -18,18 +20,35 @@
             <li><a href="licenses.html">Licenses & Certifications</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="references.html">References</a></li>
-            <li><a href="social.html">Social Media</a></li>
+            <li><a href="social.html">Contact Details</a></li>
         </ul>
     </nav>
 
     <section id="social-media">
-        <h2>Social Media</h2>
-        <div class="social-link">
-            <img src="linkedin-icon.png" alt="LinkedIn">
-            <a href="https://www.linkedin.com/in/edward-jiang-8978b7195/" target="_blank">LinkedIn: https://www.linkedin.com/in/edward-jiang-8978b7195/</a>
+        <h2>Contact Details</h2>
+        <div class="social-links-container">
+            <div class="social-link">
+                <img src="Files/images/linkedin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/edward-jiang-8978b7195/" target="_blank">Connect with me on LinkedIn</a>
+            </div>
+            <div class="social-link">
+                <img src="Files/images/gmail.png" alt="Gmail">
+                <a href="#" id="gmail-link" onclick="copyToClipboard('edward.jiang3649@gmail.com')">Connect via Email</a>
+            </div>
         </div>
+        <div id="popup-message" class="popup">Email copied to clipboard!</div>
+    </section>
+    
+
+
+
     </section>
 
     <script src="web.js"></script>
+    
 </body>
+
 </html>
+
+
+

@@ -1,0 +1,218 @@
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden; /* Hide content until hover */
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+/* Navbar List Styles */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: height 0.5s ease;
+}
+
+/* Navbar List Items */
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+#navbar:hover {
+    height: auto; /* Expands navbar on hover */
+}
+
+#navbar:hover ul {
+    height: auto; /* Allow list items to expand */
+}
+
+/* Navbar Active and Hover State */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Opacity Change on Hover */
+#navbar ul li a {
+    opacity: 0.8;
+}
+
+#navbar ul li a:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+/* Prevent Content Overlap with Navbar */
+body {
+    margin: 0;
+    padding-top: 60px; /* Adjust to match navbar height */
+    font-family: 'Montserrat', sans-serif;
+    color: #EAEAEA; /* Ensure the text color is readable */
+    background-color: #2C3E50; /* Matches the larger box background color */
+    
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1000px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Ensure expansion on smaller screens */
+    }
+
+    #navbar ul li {
+        margin-bottom: 5px;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+/* Skill Tags Styling */
+.skills-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.tag:hover {
+    background-color: #4CAF50; /* A hover effect for better interaction */
+}
+
+
+
+
+
+
+
+
+
+
+/* Social Media Section Styles */
+#social-media {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1E2A38;
+    color: #FFFFFF;
+}
+
+#social-media h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00A8E8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social-link {
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+    width: 300px;
+}
+
+.social-link img {
+    width: 50px;
+    height: auto;
+}
+
+.social-link a {
+    text-decoration: none;
+    color: #00A8E8;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    background-color: #00A8E8;
+}
+
+.social-link:hover a {
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+/* Popup Message Styles */
+.popup {
+    visibility: hidden; /* Initially hidden */
+    width: 250px;
+    background-color: #00A8E8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/* Show the popup when active */
+.popup.show {
+    visibility: visible;
+    animation: fadeinout 2s; /* Controls duration of the popup */
+}
+
+/* Fade in and out animation */
+@keyframes fadeinout {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
