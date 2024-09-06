@@ -1,0 +1,260 @@
+/* General Navbar Styles */
+#navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden; /* Hide content until hover */
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+/* Navbar List Styles */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: height 0.5s ease;
+}
+
+/* Navbar List Items */
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+#navbar:hover {
+    height: auto; /* Expands navbar on hover */
+}
+
+#navbar:hover ul {
+    height: auto; /* Allow list items to expand */
+}
+
+/* Navbar Active and Hover State */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navbar Opacity Change on Hover */
+#navbar ul li a {
+    opacity: 0.8;
+}
+
+#navbar ul li a:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+/* Prevent Content Overlap with Navbar */
+body {
+    margin: 0;
+    padding-top: 60px; /* Adjust to match navbar height */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1000px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Ensure expansion on smaller screens */
+    }
+
+    #navbar ul li {
+        margin-bottom: 5px;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+#about-me {
+    background-color: #1E2A38;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.about-me-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 80px;
+    border: 4px solid #00A8E8;
+}
+
+.about-me-text {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-me-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+
+
+
+
+
+
+
+/* teaser section------------------------------------------------------------*/
+
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2A38;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 50px 20px;
+}
+
+.teasers {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.teaser-item {
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.teaser-item:hover {
+    transform: scale(1.05);
+}
+
+.teaser-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.teaser-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.teaser-item a {
+    text-decoration: none;
+    color: #00A8E8;
+    font-weight: bold;
+}
+
+
+
+
+
+/*portfolio section------------------------------------------------------------*/
+
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-details {
+    opacity: 1;
+}
+
+.portfolio-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-details p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.portfolio-details a {
+    text-decoration: none;
+    color: #00A8E8;
+    font-weight: bold;
+}
